@@ -2,36 +2,47 @@ package com.example.demo.SeatConfigService;
 
 public class SeatConfig {
 
-	String a ;
-	String b ;
-	
-	public SeatConfig() {
-	
-	}
+	String SeatNo ;
+	String Berth;
+	String OppBerth;
 	
 
-	public SeatConfig(String a, String b) {
+	public SeatConfig() {
 		
-		this.a = a;
-		this.b = b;
+	
+	}
+	
+	public SeatConfig(String berth, String oppBerth, String seatNo) {
+		super();
+		Berth = berth;
+		OppBerth = oppBerth;
+		SeatNo = seatNo;
 	}
 	
 	
-	public String getA() {
-		return a;
+	public String getBerth() {
+		return Berth;
 	}
-	public void setA(String a) {
-		this.a = a;
+	public void setBerth(String berth) {
+		Berth = berth;
 	}
-	public String getB() {
-		return b;
+	public String getOppBerth() {
+		return OppBerth;
 	}
-	public void setB(String b) {
-		this.b = b;
+	public void setOppBerth(String oppBerth) {
+		OppBerth = oppBerth;
 	}
+
+	public String getSeatNo() {
+		return SeatNo;
+	}
+
+	public void setSeatNo(String seatNo) {
+		SeatNo = seatNo;
+	}
+
 	
 	
 	
-	
-	
+
 }

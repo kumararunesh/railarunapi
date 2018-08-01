@@ -12,15 +12,8 @@ public class SeatConfigController {
 	@Autowired
 	private SeatConfigService SeatConfigService ;
 	
-	/*@RequestMapping("/seatconfig")
-	public SeatConfig getAll()
-	{
-		return SeatConfigService.getAll();
-		
-	}
-	*/
 	@RequestMapping("/seatconfig/{id}")
-	public String getAll(@PathVariable String id)
+	public SeatConfig getAll(@PathVariable String id)
 	{
 		return SeatConfigService.getseat(id);
 		

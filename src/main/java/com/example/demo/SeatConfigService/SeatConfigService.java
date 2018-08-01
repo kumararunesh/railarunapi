@@ -6,14 +6,10 @@ import org.springframework.stereotype.Service;
 
 public class SeatConfigService {
 	
-	private SeatConfig SeatConfig1 = new SeatConfig("Name","Desc");
+	private SeatConfig SeatConfig = new SeatConfig();
 	
-	public SeatConfig getAll()
-	{
-		return SeatConfig1 ;
-	}
 	
-	public String getseat(String id)
+	public SeatConfig getseat(String id)
 	{    
 		int a = Integer.parseInt(id);
 		int b = a % 12;
@@ -43,7 +39,11 @@ public class SeatConfigService {
 		opp = opp + 12*m;
 		
 		
-		return   id+" is "+c+ "which is opposite to seat no."+opp;
+		SeatConfig.setSeatNo(id);
+		SeatConfig.setBerth(c);
+		SeatConfig.setOppBerth(Integer.toString(opp));
+		
+		return SeatConfig;
 		
 
 	}
