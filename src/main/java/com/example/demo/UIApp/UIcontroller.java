@@ -22,7 +22,7 @@ public class UIcontroller {
 	 @PostMapping("/seat")
 	    public String greetingSubmit(@ModelAttribute Seat seat) {
 	    	
-	    	final String uri = "http://localhost:8080/seatconfig/"+seat.getSeatNo() ;
+	    	final String uri = "https://railarunapi.herokuapp.com/seatconfig/"+seat.getSeatNo() ;
 
 		    RestTemplate restTemplate = new RestTemplate();
 		    Seat seat1 = restTemplate.getForObject(uri, Seat.class);

@@ -1,15 +1,18 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Handling Form Submission</title>
+    <title>Rail Result</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<h1>Result</h1>
+	<h1>Your seating Arrangement</h1>
 	
 	<p th:text="'Seat Number : ' + ${seat.seatNo}" />
     <p th:text="'Type of Seat : ' + ${seat.berth}" />
       <p th:text="'Seat opposite to it : ' + ${seat.oppBerth}" />
+      
+     <img src="https://etrain.info/images/coach-layout/2S.gif" >
+
     <a href="/seat">Submit another message</a>
 </body>
 </html>
