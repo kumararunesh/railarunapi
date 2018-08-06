@@ -22,7 +22,7 @@ public class UIcontroller {
 	 @PostMapping("/seat")
 	    public String greetingSubmit(@ModelAttribute Seat seat) {
 	    	
-	    	final String uri = "http://kumararunesh211994-eval-prod.apigee.net/railseats"+seat.getSeatNo() ;
+	    	final String uri = "http://kumararunesh211994-eval-prod.apigee.net/railseats/"+seat.getSeatNo() ;
 
 		    RestTemplate restTemplate = new RestTemplate();
 		    Seat seat1 = restTemplate.getForObject(uri, Seat.class);
